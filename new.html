@@ -13,6 +13,12 @@
         <link rel="alternate" type="application/rss+xml" title="Myour - One Page Resume WordPress Theme &raquo; Feed" href="https://myour.bslthemes.com/feed/" />
         <link rel="alternate" type="application/rss+xml" title="Myour - One Page Resume WordPress Theme &raquo; Comments Feed" href="https://myour.bslthemes.com/comments/feed/" />
        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function() {
+        emailjs.init("user_xrRjTKr9MdESSiAEa8RIA");
+            })();
+        </script>
         <script type="text/javascript">
             window._wpemojiSettings = {
                 baseUrl: "https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/",
@@ -1483,7 +1489,7 @@
                                                                                         </p>
                                                                                     </div>
                                                                                     <div class="group-bts">
-                                                                                        <button type="submit" class="btn">
+                                                                                        <button type="submit" onclick="sendmail()" class="btn">
                                                                                             <span class="animated-button"><span>Send Message</span></span><i class="icon fas fa-chevron-right"></i>
                                                                                         </button>
                                                                                     </div>
