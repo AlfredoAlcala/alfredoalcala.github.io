@@ -14,5 +14,5 @@ function sendmail() {
             message: userMessage
         };
 
-        emailjs.send('service_mt3wqrh', 'service_mt3wqrh', contactParams).then(function (res) {})
+        emailjs.send('service_mt3wqrh', 'template_s0h1dwo', contactParams).then(function (res) {})
 }
