@@ -9480,7 +9480,7 @@ blockquote {
     padding: 0 0 0 50px;
     position: fixed;
     left: 550px;
-    right: 50px;
+    right: 0px;
     top: 40px;
     height: 80px;
     z-index: 100;
