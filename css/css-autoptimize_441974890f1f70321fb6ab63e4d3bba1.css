@@ -10133,7 +10133,7 @@ blockquote {
     padding-bottom: 50px;
 }
 .section.started .h-title {
-    margin: 40px 0 0 -11vw;
+    /*margin: 40px 0 0 -11vw;*/
     padding: 4.2vw;
     font-size: 4.2vw;
     line-height: 1.4;
