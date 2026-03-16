@@ -3,27 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Alfredo Alcala | System Administrator and IT Specialist focused on automation, cloud platforms, endpoint management, and end-user experience." />
-  <meta name="theme-color" content="#0b1020" />
-  <title>Alfredo Alcala | System Administrator & IT Specialist</title>
+  <meta name="description" content="Alfredo Alcala | System Administrator, IT Specialist, and AI-enabled operations professional." />
+  <meta name="theme-color" content="#070b17" />
+  <title>Alfredo Alcala | Systems, Automation & AI</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #07111f;
-      --bg-soft: #0d1729;
-      --panel: rgba(15, 23, 42, 0.72);
-      --panel-strong: rgba(15, 23, 42, 0.92);
-      --text: #e5eefb;
-      --muted: #9cb0cf;
-      --line: rgba(148, 163, 184, 0.18);
-      --brand: #5eead4;
-      --brand-2: #60a5fa;
-      --accent: #c084fc;
-      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
-      --radius: 24px;
-      --radius-sm: 16px;
+      --bg: #050816;
+      --bg-2: #0a1023;
+      --bg-3: #0e1731;
+      --panel: rgba(13, 20, 40, 0.72);
+      --panel-2: rgba(10, 16, 35, 0.88);
+      --text: #eaf1ff;
+      --muted: #9db0d4;
+      --line: rgba(255,255,255,0.08);
+      --brand: #66e3ff;
+      --brand-2: #7c8cff;
+      --brand-3: #cb7dff;
+      --success: #7cf7c3;
+      --shadow: 0 24px 80px rgba(0,0,0,0.38);
+      --radius: 28px;
+      --radius-sm: 18px;
       --max: 1180px;
     }
 
@@ -33,11 +35,45 @@
       margin: 0;
       font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       color: var(--text);
-      background:
-        radial-gradient(circle at top left, rgba(96, 165, 250, 0.18), transparent 32%),
-        radial-gradient(circle at 85% 15%, rgba(192, 132, 252, 0.16), transparent 24%),
-        linear-gradient(180deg, #040816 0%, #07111f 48%, #08121d 100%);
       line-height: 1.6;
+      overflow-x: hidden;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(102, 227, 255, 0.16), transparent 24%),
+        radial-gradient(circle at 90% 18%, rgba(203, 125, 255, 0.16), transparent 22%),
+        radial-gradient(circle at 52% 82%, rgba(124, 140, 255, 0.18), transparent 26%),
+        linear-gradient(180deg, #030611 0%, #07101f 45%, #050816 100%);
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 34px 34px;
+      mask-image: linear-gradient(180deg, rgba(255,255,255,0.35), transparent 78%);
+      z-index: -3;
+    }
+
+    .orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.3;
+      pointer-events: none;
+      z-index: -2;
+      animation: float 14s ease-in-out infinite;
+    }
+
+    .orb.one { width: 340px; height: 340px; top: 6%; left: -80px; background: rgba(102, 227, 255, 0.42); }
+    .orb.two { width: 280px; height: 280px; top: 38%; right: -70px; background: rgba(203, 125, 255, 0.34); animation-delay: -4s; }
+    .orb.three { width: 320px; height: 320px; bottom: -90px; left: 30%; background: rgba(124, 140, 255, 0.34); animation-delay: -9s; }
+
+    @keyframes float {
+      0%, 100% { transform: translate3d(0,0,0) scale(1); }
+      50% { transform: translate3d(10px,-24px,0) scale(1.05); }
     }
 
     a { color: inherit; text-decoration: none; }
@@ -51,86 +87,113 @@
     .nav {
       position: sticky;
       top: 0;
-      z-index: 50;
-      backdrop-filter: blur(18px);
-      background: rgba(4, 8, 22, 0.68);
+      z-index: 100;
       border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(18px);
+      background: rgba(4, 8, 22, 0.62);
     }
 
     .nav-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 1rem 0;
       gap: 1rem;
+      padding: 1rem 0;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 0.9rem;
+      gap: 0.85rem;
       font-weight: 800;
       letter-spacing: -0.04em;
     }
 
     .brand-mark {
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
       display: grid;
       place-items: center;
-      background: linear-gradient(135deg, var(--brand), var(--brand-2));
-      color: #04111b;
+      color: #061019;
       font-weight: 900;
-      box-shadow: var(--shadow);
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      box-shadow: 0 16px 40px rgba(102, 227, 255, 0.22);
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 1.25rem;
+      gap: 1.2rem;
       color: var(--muted);
       font-size: 0.96rem;
+    }
+
+    .nav-links a {
+      position: relative;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      width: 100%;
+      height: 2px;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s ease;
+      background: linear-gradient(90deg, var(--brand), var(--brand-3));
     }
 
     .nav-links a:hover,
     .nav-links a:focus-visible { color: var(--text); }
 
+    .nav-links a:hover::after,
+    .nav-links a:focus-visible::after { transform: scaleX(1); }
+
     .button,
-    .button-outline {
+    .button-outline,
+    .button-ghost {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 0.6rem;
-      min-height: 48px;
-      padding: 0.85rem 1.2rem;
+      gap: 0.65rem;
+      min-height: 50px;
+      padding: 0.9rem 1.2rem;
       border-radius: 999px;
       font-weight: 700;
-      transition: transform 0.2s ease, opacity 0.2s ease, border-color 0.2s ease;
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
     }
 
     .button:hover,
-    .button-outline:hover { transform: translateY(-1px); }
+    .button-outline:hover,
+    .button-ghost:hover { transform: translateY(-2px); }
 
     .button {
+      color: #051019;
       background: linear-gradient(135deg, var(--brand), var(--brand-2));
-      color: #03121c;
-      box-shadow: 0 16px 40px rgba(94, 234, 212, 0.2);
+      box-shadow: 0 18px 42px rgba(102, 227, 255, 0.2);
     }
 
-    .button-outline {
+    .button-outline,
+    .button-ghost {
       border: 1px solid var(--line);
+      background: rgba(255,255,255,0.03);
       color: var(--text);
-      background: rgba(255,255,255,0.02);
     }
+
+    .button-ghost { min-height: 42px; padding: 0.7rem 1rem; }
 
     .hero {
-      padding: 5.5rem 0 4rem;
+      padding: 6rem 0 4.25rem;
+      position: relative;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
+      grid-template-columns: 1.12fr 0.88fr;
       gap: 2rem;
       align-items: center;
     }
@@ -138,31 +201,53 @@
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 0.6rem;
-      border: 1px solid rgba(94, 234, 212, 0.2);
-      background: rgba(94, 234, 212, 0.08);
-      color: var(--brand);
-      padding: 0.5rem 0.9rem;
+      gap: 0.55rem;
+      padding: 0.52rem 0.9rem;
       border-radius: 999px;
+      border: 1px solid rgba(102, 227, 255, 0.18);
+      background: rgba(102, 227, 255, 0.08);
+      color: var(--brand);
       font-size: 0.9rem;
       font-weight: 700;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.15rem;
     }
 
     h1 {
-      font-size: clamp(2.8rem, 7vw, 5.5rem);
-      line-height: 0.95;
-      letter-spacing: -0.06em;
       margin: 0;
+      font-size: clamp(3rem, 8vw, 6rem);
+      line-height: 0.92;
+      letter-spacing: -0.07em;
       max-width: 10ch;
     }
 
-    .hero h1 span { color: var(--brand); }
+    .gradient-text {
+      background: linear-gradient(135deg, var(--brand), #b1b9ff 55%, var(--brand-3));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .typed-line {
+      min-height: 2rem;
+      margin-top: 1rem;
+      color: #b4c3ff;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      font-size: 1.06rem;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 0.6ch;
+      animation: blink 1s steps(1) infinite;
+    }
+
+    @keyframes blink { 50% { opacity: 0; } }
 
     .hero-copy {
-      margin-top: 1.4rem;
-      max-width: 64ch;
-      font-size: 1.08rem;
+      margin-top: 1.1rem;
+      max-width: 66ch;
+      font-size: 1.07rem;
       color: var(--muted);
     }
 
@@ -170,22 +255,25 @@
       display: flex;
       flex-wrap: wrap;
       gap: 0.9rem;
-      margin-top: 1.8rem;
+      margin-top: 1.75rem;
     }
 
     .metrics {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1rem;
-      margin-top: 2.2rem;
+      margin-top: 2rem;
     }
 
     .metric,
-    .card,
+    .panel,
     .timeline-item,
     .contact-panel,
     .skill-pill,
-    .highlight {
+    .highlight,
+    .spotlight,
+    .mini-card,
+    .quote-box {
       border: 1px solid var(--line);
       background: var(--panel);
       backdrop-filter: blur(18px);
@@ -194,71 +282,112 @@
 
     .metric {
       padding: 1rem;
-      border-radius: 20px;
+      border-radius: 22px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .metric::before,
+    .panel::before,
+    .spotlight::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.05), transparent 45%);
+      pointer-events: none;
     }
 
     .metric strong {
       display: block;
-      font-size: 1.5rem;
+      font-size: 1.55rem;
       letter-spacing: -0.04em;
     }
 
-    .metric span {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
+    .metric span { color: var(--muted); font-size: 0.95rem; }
 
     .hero-card {
       padding: 1.4rem;
-      border-radius: 28px;
+      border-radius: 30px;
       position: relative;
       overflow: hidden;
-      background: linear-gradient(180deg, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.72));
       border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(13, 20, 40, 0.95), rgba(10, 16, 35, 0.76));
       box-shadow: var(--shadow);
+      transform-style: preserve-3d;
+      transition: transform 0.2s ease;
     }
 
-    .hero-card::before {
+    .hero-card::after {
       content: "";
       position: absolute;
-      inset: auto -40px -40px auto;
+      right: -40px;
+      bottom: -40px;
       width: 180px;
       height: 180px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(96, 165, 250, 0.32), transparent 65%);
+      background: radial-gradient(circle, rgba(102, 227, 255, 0.25), transparent 66%);
     }
 
     .portrait {
-      aspect-ratio: 1 / 1.12;
-      border-radius: 22px;
+      aspect-ratio: 1 / 1.05;
+      border-radius: 24px;
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(255,255,255,0.08);
       background:
-        linear-gradient(160deg, rgba(96, 165, 250, 0.22), rgba(94, 234, 212, 0.08)),
-        linear-gradient(180deg, #132238, #0a1422);
+        radial-gradient(circle at top left, rgba(102, 227, 255, 0.24), transparent 34%),
+        radial-gradient(circle at bottom right, rgba(203, 125, 255, 0.2), transparent 36%),
+        linear-gradient(180deg, #162342, #0b1327);
       display: grid;
       place-items: center;
-      border: 1px solid rgba(255,255,255,0.06);
-      margin-bottom: 1rem;
-      overflow: hidden;
     }
 
     .portrait span {
-      font-size: clamp(4rem, 10vw, 6rem);
+      font-size: clamp(4.4rem, 10vw, 6.4rem);
       font-weight: 900;
       letter-spacing: -0.08em;
-      color: rgba(255,255,255,0.9);
+      color: rgba(255,255,255,0.95);
+      text-shadow: 0 8px 28px rgba(0,0,0,0.3);
     }
 
-    .hero-card h2 {
-      margin: 0 0 0.35rem;
-      font-size: 1.4rem;
+    .status-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1rem;
     }
 
-    .hero-card p {
-      margin: 0;
-      color: var(--muted);
+    .status-chip {
+      padding: 0.56rem 0.78rem;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+      color: var(--text);
+      font-size: 0.88rem;
     }
 
-    section { padding: 2.2rem 0; }
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    .mini-card {
+      padding: 0.9rem;
+      border-radius: 18px;
+    }
+
+    .mini-card strong {
+      display: block;
+      margin-bottom: 0.18rem;
+      font-size: 0.92rem;
+    }
+
+    .mini-card span { color: var(--muted); font-size: 0.9rem; }
+
+    section { padding: 2.3rem 0; }
 
     .section-head {
       display: flex;
@@ -270,13 +399,13 @@
 
     .section-head h2 {
       margin: 0;
-      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
       letter-spacing: -0.05em;
     }
 
     .section-head p {
       margin: 0;
-      max-width: 56ch;
+      max-width: 58ch;
       color: var(--muted);
     }
 
@@ -284,7 +413,8 @@
     .cards-2,
     .timeline,
     .contact-grid,
-    .skill-grid {
+    .skill-grid,
+    .spotlight-grid {
       display: grid;
       gap: 1rem;
     }
@@ -292,32 +422,38 @@
     .cards-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .cards-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .timeline { grid-template-columns: 1fr; }
-    .contact-grid { grid-template-columns: 1.2fr 0.8fr; }
+    .contact-grid { grid-template-columns: 1.15fr 0.85fr; }
     .skill-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .spotlight-grid { grid-template-columns: 1.1fr 0.9fr; }
 
-    .card,
+    .panel,
     .timeline-item,
-    .contact-panel {
+    .contact-panel,
+    .spotlight,
+    .quote-box {
       padding: 1.35rem;
       border-radius: var(--radius);
+      position: relative;
+      overflow: hidden;
     }
 
-    .card h3,
+    .panel h3,
     .timeline-item h3,
-    .contact-panel h3 {
-      margin-top: 0;
-      margin-bottom: 0.55rem;
+    .contact-panel h3,
+    .spotlight h3 {
+      margin: 0 0 0.55rem;
       font-size: 1.12rem;
       letter-spacing: -0.03em;
     }
 
-    .card p,
+    .panel p,
     .timeline-item p,
     .contact-panel p,
     .timeline-item li,
-    .contact-panel li {
-      color: var(--muted);
-    }
+    .contact-panel li,
+    .spotlight li,
+    .spotlight p,
+    .quote-box p { color: var(--muted); }
 
     .tag-row {
       display: flex;
@@ -327,15 +463,33 @@
     }
 
     .skill-pill {
-      padding: 0.7rem 0.9rem;
+      padding: 0.72rem 0.94rem;
       border-radius: 999px;
       font-size: 0.92rem;
       color: var(--text);
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .skill-pill:hover {
+      transform: translateY(-2px);
+      border-color: rgba(102, 227, 255, 0.32);
+      background: rgba(255,255,255,0.06);
     }
 
     .timeline-item {
-      position: relative;
       overflow: hidden;
+      padding-left: 1.55rem;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(180deg, var(--brand), var(--brand-3));
+      border-radius: 999px;
     }
 
     .timeline-top {
@@ -348,39 +502,69 @@
 
     .timeline-date {
       color: var(--brand);
-      font-size: 0.93rem;
+      font-size: 0.92rem;
       font-weight: 800;
       letter-spacing: 0.02em;
       text-transform: uppercase;
     }
 
-    .timeline-company {
-      color: var(--text);
-      font-weight: 700;
-    }
-
-    .timeline-role {
-      font-size: 1.08rem;
-      font-weight: 800;
-    }
+    .timeline-company { color: var(--text); font-weight: 700; }
+    .timeline-role { font-size: 1.08rem; font-weight: 800; }
 
     ul.clean {
       padding-left: 1rem;
-      margin: 0.8rem 0 0;
+      margin: 0.75rem 0 0;
+    }
+
+    .spotlight-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.42rem 0.72rem;
+      border-radius: 999px;
+      border: 1px solid rgba(102, 227, 255, 0.22);
+      background: rgba(102, 227, 255, 0.08);
+      color: var(--brand);
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+
+    .checklist {
+      display: grid;
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    .checklist div {
+      padding: 0.95rem 1rem;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .checklist strong { display: block; margin-bottom: 0.18rem; }
+
+    .quote-box {
+      background: linear-gradient(180deg, rgba(102, 227, 255, 0.08), rgba(255,255,255,0.02));
+    }
+
+    .quote-box strong {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-size: 0.95rem;
+      color: var(--brand);
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
     }
 
     .highlight {
       display: flex;
       gap: 1rem;
       align-items: flex-start;
-      padding: 1.1rem;
+      padding: 1.15rem;
       border-radius: 20px;
     }
 
-    .highlight strong {
-      display: block;
-      margin-bottom: 0.2rem;
-    }
+    .highlight strong { display: block; margin-bottom: 0.25rem; }
 
     .contact-list {
       display: grid;
@@ -391,16 +575,22 @@
     .contact-list a,
     .contact-list div {
       display: block;
-      padding: 0.95rem 1rem;
+      padding: 1rem;
       border-radius: 18px;
       border: 1px solid var(--line);
-      background: rgba(255,255,255,0.02);
+      background: rgba(255,255,255,0.03);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .contact-list a:hover {
+      transform: translateY(-2px);
+      border-color: rgba(102, 227, 255, 0.3);
     }
 
     .contact-list small {
       display: block;
       color: var(--muted);
-      margin-bottom: 0.18rem;
+      margin-bottom: 0.2rem;
     }
 
     .footer {
@@ -409,35 +599,45 @@
       text-align: center;
     }
 
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     @media (max-width: 980px) {
       .hero-grid,
       .cards-3,
       .cards-2,
       .contact-grid,
-      .skill-grid {
+      .skill-grid,
+      .spotlight-grid {
         grid-template-columns: 1fr;
       }
 
-      .nav-inner {
-        flex-wrap: wrap;
-      }
-
-      .nav-links {
-        flex-wrap: wrap;
-        width: 100%;
-      }
-
+      .nav-inner { flex-wrap: wrap; }
+      .nav-links { flex-wrap: wrap; width: 100%; }
       h1 { max-width: none; }
     }
 
     @media (max-width: 640px) {
       .metrics { grid-template-columns: 1fr; }
-      .hero { padding-top: 4rem; }
+      .mini-grid { grid-template-columns: 1fr; }
+      .hero { padding-top: 4.2rem; }
       .section-head { align-items: start; flex-direction: column; }
     }
   </style>
 </head>
 <body>
+  <div class="orb one"></div>
+  <div class="orb two"></div>
+  <div class="orb three"></div>
+
   <header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="#top" aria-label="Go to homepage">
@@ -448,6 +648,7 @@
       <nav class="nav-links" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#expertise">Expertise</a>
+        <a href="#impact">Impact</a>
         <a href="#experience">Experience</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
@@ -458,94 +659,158 @@
   </header>
 
   <main id="top">
-    <section class="hero">
+    <section class="hero reveal">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">Available for impactful IT leadership and systems work</div>
-          <h1>Turning IT complexity into <span>stable, scalable</span> user experiences.</h1>
+          <div class="eyebrow">Available for systems, automation, and AI-enabled IT work</div>
+          <h1>Making IT feel <span class="gradient-text">smarter, faster, and human.</span></h1>
+          <div class="typed-line"><span id="typed-text"></span><span class="cursor">|</span></div>
           <p class="hero-copy">
-            I’m Alfredo Alcala, a Bogota-based System Administrator and IT Specialist with 12+ years of experience across endpoint management, cloud platforms, automation, infrastructure support, end-user operations, and practical AI implementation for business and IT workflows. I help teams reduce friction, improve reliability, and turn technical challenges into business value.
+            I’m Alfredo Alcala, a Bogota-based System Administrator and IT Specialist with 12+ years of experience across cloud platforms, endpoint operations, automation, infrastructure support, and practical AI implementation. I help teams reduce friction, modernize workflows, and create IT experiences people actually enjoy using.
           </p>
           <div class="hero-actions">
-            <a class="button" href="#contact">Let’s work together</a>
+            <a class="button" href="#contact">Let’s build something better</a>
             <a class="button-outline" href="https://www.linkedin.com/in/alfredo-alcala-h/" target="_blank" rel="noreferrer">View LinkedIn</a>
+            <a class="button-ghost" href="#impact">See impact ↓</a>
           </div>
           <div class="metrics" aria-label="Career highlights">
             <div class="metric">
-              <strong>12+ years</strong>
-              <span>Experience in IT support, systems, and applications</span>
+              <strong data-count="12">12+</strong>
+              <span>Years across IT support, systems, and operations</span>
             </div>
             <div class="metric">
-              <strong>2025–Now</strong>
-              <span>System Administrator at Huge</span>
+              <strong>System Admin</strong>
+              <span>Current role leading modern support and platform work</span>
             </div>
             <div class="metric">
-              <strong>Automation</strong>
-              <span>Scripting, API troubleshooting, and workflow improvement</span>
+              <strong>AI + Automation</strong>
+              <span>Workflow improvement using scripting and modern AI tools</span>
             </div>
           </div>
         </div>
 
-        <aside class="hero-card" aria-label="Profile summary card">
+        <aside class="hero-card reveal" id="tilt-card" aria-label="Profile summary card">
           <div class="portrait" aria-hidden="true">
             <span>AA</span>
           </div>
           <h2>System Administrator</h2>
-          <p>Focused on cloud operations, Mac provisioning, directory services, scripting, and modern IT support.</p>
-          <div class="tag-row">
-            <span class="skill-pill">Google Workspace</span>
-            <span class="skill-pill">AWS</span>
-            <span class="skill-pill">MDM / DEP</span>
-            <span class="skill-pill">PowerShell</span>
-            <span class="skill-pill">Bash</span>
-            <span class="skill-pill">REST API</span>
-            <span class="skill-pill">ChatGPT</span>
-            <span class="skill-pill">Claude</span>
-            <span class="skill-pill">Google AI Studio</span>
+          <p>Focused on cloud operations, endpoint management, automation, AI-assisted workflows, and modern IT support.</p>
+          <div class="status-row">
+            <span class="status-chip">Google Workspace</span>
+            <span class="status-chip">AWS</span>
+            <span class="status-chip">MDM / DEP</span>
+            <span class="status-chip">ChatGPT</span>
+            <span class="status-chip">Claude</span>
+            <span class="status-chip">Google AI Studio</span>
+          </div>
+          <div class="mini-grid">
+            <div class="mini-card">
+              <strong>Focus</strong>
+              <span>Systems, automation, AI enablement</span>
+            </div>
+            <div class="mini-card">
+              <strong>Based in</strong>
+              <span>Bogota, Colombia</span>
+            </div>
+            <div class="mini-card">
+              <strong>Works with</strong>
+              <span>Mac, cloud, support ops</span>
+            </div>
+            <div class="mini-card">
+              <strong>Approach</strong>
+              <span>Reliable, modern, user-first</span>
+            </div>
           </div>
         </aside>
       </div>
     </section>
 
-    <section id="about">
+    <section id="about" class="reveal">
       <div class="container">
         <div class="section-head">
           <div>
             <h2>Professional profile</h2>
           </div>
-          <p>
-            I combine technical depth with a service mindset. My work centers on making systems easier to manage, support experiences smoother for users, and IT environments more dependable for the business.
-          </p>
+          <p>I combine technical depth with a strong service mindset. My work centers on making systems easier to manage, support experiences smoother for users, and IT environments more dependable for the business.</p>
         </div>
 
         <div class="cards-3">
-          <article class="card">
+          <article class="panel">
             <h3>Operations that scale</h3>
-            <p>I support daily IT operations with a focus on reliability, standardization, and fast issue resolution across endpoints, accounts, and collaboration tools.</p>
+            <p>I support day-to-day IT operations with a focus on reliability, standardization, and fast resolution across endpoints, accounts, collaboration tools, and user support.</p>
           </article>
-          <article class="card">
+          <article class="panel">
             <h3>Automation & AI enablement</h3>
-            <p>I improve repeatable workflows using Google Apps Script, Bash, PowerShell, and modern AI tools, helping reduce manual work, improve response quality, and strengthen operational consistency.</p>
+            <p>I improve repeatable workflows using Google Apps Script, Bash, PowerShell, and modern AI tools to reduce manual work and improve consistency, speed, and response quality.</p>
           </article>
-          <article class="card">
+          <article class="panel">
             <h3>User-first support</h3>
-            <p>I apply customer service principles to IT so employees and stakeholders receive responsive, practical, and confidence-building support.</p>
+            <p>I apply customer service principles to IT so employees and stakeholders get responsive, practical, and confidence-building support instead of friction.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="expertise">
+    <section id="impact" class="reveal">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Impact & featured strengths</h2>
+          </div>
+          <p>This section makes the site feel more alive and shows how Alfredo works in practice across support, systems, automation, and AI-assisted operations.</p>
+        </div>
+
+        <div class="spotlight-grid">
+          <article class="spotlight">
+            <span class="spotlight-badge">Featured capability</span>
+            <h3 style="margin-top:0.9rem; font-size:1.32rem;">AI & automation for real IT workflows</h3>
+            <p>Practical use of ChatGPT, Claude, and Google AI Studio to accelerate documentation, improve troubleshooting, and support smarter internal workflows.</p>
+            <div class="checklist">
+              <div>
+                <strong>Documentation acceleration</strong>
+                <span>Draft internal docs, SOPs, support summaries, and knowledge base content faster.</span>
+              </div>
+              <div>
+                <strong>Troubleshooting support</strong>
+                <span>Use AI as a technical copilot for faster diagnosis, better prompts, and improved investigation paths.</span>
+              </div>
+              <div>
+                <strong>Workflow improvement</strong>
+                <span>Combine scripting and AI tools to reduce repetitive tasks and improve operational consistency.</span>
+              </div>
+            </div>
+          </article>
+
+          <div style="display:grid; gap:1rem;">
+            <article class="quote-box">
+              <strong>Why this site feels better now</strong>
+              <p>It is no longer just a resume on a page. It now has visual movement, stronger storytelling, more contrast, clearer hierarchy, and sections that actually sell your value.</p>
+            </article>
+            <article class="spotlight">
+              <h3 style="font-size:1.22rem;">What makes Alfredo memorable</h3>
+              <ul class="clean">
+                <li>Strong mix of systems administration and end-user empathy</li>
+                <li>Hands-on automation mindset with practical AI adoption</li>
+                <li>Modern technical profile without sounding exaggerated</li>
+                <li>Professional presence designed to catch recruiter attention</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="expertise" class="reveal">
       <div class="container">
         <div class="section-head">
           <div>
             <h2>Core expertise</h2>
           </div>
-          <p>Selected strengths, tools, and areas of impact built across systems support, infrastructure, and application administration.</p>
+          <p>Selected strengths, tools, and areas of impact built across systems support, infrastructure, application administration, and AI-assisted process improvement.</p>
         </div>
 
         <div class="skill-grid">
-          <div class="card">
+          <div class="panel">
             <h3>Platforms & administration</h3>
             <div class="tag-row">
               <span class="skill-pill">Google Workspace</span>
@@ -556,7 +821,7 @@
               <span class="skill-pill">Remote support</span>
             </div>
           </div>
-          <div class="card">
+          <div class="panel">
             <h3>Technical capabilities</h3>
             <div class="tag-row">
               <span class="skill-pill">Scripting</span>
@@ -569,11 +834,11 @@
               <span class="skill-pill">Prompt optimization</span>
             </div>
           </div>
-          <div class="card">
-            <h3>Certifications, AI & continuous learning</h3>
-            <p>Ongoing upskilling in JavaScript, jQuery, JSON, HTML, CSS, Python, Linux, Git, data science, application development, and the practical use of AI platforms such as ChatGPT, Claude, and Google AI Studio for productivity and workflow improvement.</p>
+          <div class="panel">
+            <h3>Continuous learning</h3>
+            <p>Ongoing upskilling in JavaScript, jQuery, JSON, HTML, CSS, Python, Linux, Git, data science, application development, and the practical use of AI platforms for productivity and workflow improvement.</p>
           </div>
-          <div class="card">
+          <div class="panel">
             <h3>Languages</h3>
             <div class="tag-row">
               <span class="skill-pill">Spanish — Native/Bilingual</span>
@@ -584,7 +849,7 @@
       </div>
     </section>
 
-    <section id="experience">
+    <section id="experience" class="reveal">
       <div class="container">
         <div class="section-head">
           <div>
@@ -607,7 +872,7 @@
               <li>Manage Google Workspace and AWS cloud solutions.</li>
               <li>Support stable operations through troubleshooting, systems administration, and issue resolution.</li>
               <li>Debug REST API integrations and automate workflows with Google Apps Script, Bash, and PowerShell.</li>
-              <li>Support practical AI implementation and management for internal productivity, documentation, troubleshooting, and process improvement using platforms such as ChatGPT, Claude, and Google AI Studio.</li>
+              <li>Support practical AI implementation and management for productivity, documentation, troubleshooting, and process improvement using ChatGPT, Claude, and Google AI Studio.</li>
               <li>Manage user accounts, groups, email lists, and network-related support for file shares, DNS, VPN, and printers.</li>
             </ul>
           </article>
@@ -691,9 +956,9 @@
       </div>
     </section>
 
-    <section id="education">
+    <section id="education" class="reveal">
       <div class="container cards-2">
-        <div class="card">
+        <div class="panel">
           <div class="section-head" style="margin-bottom:0.8rem;">
             <div>
               <h2>Education</h2>
@@ -703,7 +968,7 @@
           <p>IUTIRLA · 2007 — 2011</p>
         </div>
 
-        <div class="card">
+        <div class="panel">
           <div class="section-head" style="margin-bottom:0.8rem;">
             <div>
               <h2>What sets me apart</h2>
@@ -719,7 +984,7 @@
       </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="reveal">
       <div class="container contact-grid">
         <div class="contact-panel">
           <div class="section-head" style="margin-bottom:0.8rem;">
@@ -766,8 +1031,68 @@
 
   <footer class="footer">
     <div class="container">
-      <p>© 2026 Alfredo Alcala. Designed to present a stronger, more modern professional profile.</p>
+      <p>© 2026 Alfredo Alcala. Designed as a more memorable, modern professional profile.</p>
     </div>
   </footer>
+
+  <script>
+    const typedPhrases = [
+      'System Administrator',
+      'IT Specialist',
+      'Automation & AI Implementer',
+      'Cloud & Endpoint Operations'
+    ];
+
+    const typedTarget = document.getElementById('typed-text');
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
+
+    function runTyping() {
+      if (!typedTarget) return;
+      const current = typedPhrases[phraseIndex];
+      typedTarget.textContent = deleting
+        ? current.slice(0, charIndex--)
+        : current.slice(0, charIndex++);
+
+      let speed = deleting ? 42 : 74;
+
+      if (!deleting && charIndex === current.length + 1) {
+        deleting = true;
+        speed = 1300;
+      } else if (deleting && charIndex < 0) {
+        deleting = false;
+        phraseIndex = (phraseIndex + 1) % typedPhrases.length;
+        charIndex = 0;
+        speed = 240;
+      }
+
+      setTimeout(runTyping, speed);
+    }
+    runTyping();
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.14 });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    const tiltCard = document.getElementById('tilt-card');
+    if (tiltCard) {
+      tiltCard.addEventListener('mousemove', (e) => {
+        const rect = tiltCard.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const rotateY = ((x / rect.width) - 0.5) * 10;
+        const rotateX = ((y / rect.height) - 0.5) * -10;
+        tiltCard.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      });
+      tiltCard.addEventListener('mouseleave', () => {
+        tiltCard.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+      });
+    }
+  </script>
 </body>
 </html>
