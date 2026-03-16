@@ -645,7 +645,8 @@
         <span>Alfredo Alcala</span>
       </a>
 
-      <nav class="nav-links" aria-label="Primary">
+      <div style="display:flex; align-items:center; gap:0.75rem; flex-wrap:wrap;">
+        <nav class="nav-links" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#expertise">Expertise</a>
         <a href="#impact">Impact</a>
@@ -653,8 +654,12 @@
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </nav>
-
-      <a class="button-outline" href="https://raw.githubusercontent.com/AlfredoAlcala/cv/gh-pages/Alfredo's%20Resume.pdf" target="_blank" rel="noreferrer">Download CV</a>
+        <div style="display:flex; gap:0.45rem;">
+          <button class="button-ghost" id="lang-en" type="button">EN</button>
+          <button class="button-ghost" id="lang-es" type="button">ES</button>
+        </div>
+      </div>
+      <a class="button-outline" id="resume-button" href="https://raw.githubusercontent.com/AlfredoAlcala/cv/gh-pages/Alfredo's%20Resume.pdf" target="_blank" rel="noreferrer">Download CV</a>
     </div>
   </header>
 
@@ -662,16 +667,16 @@
     <section class="hero reveal">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">Available for systems, automation, and AI-enabled IT work</div>
-          <h1>Making IT feel <span class="gradient-text">smarter, faster, and human.</span></h1>
+          <div class="eyebrow" data-i18n="heroEyebrow">Available for systems, automation, and AI-enabled IT work</div>
+          <h1 data-i18n-html="heroTitle">Making IT feel <span class="gradient-text">smarter, faster, and human.</span></h1>
           <div class="typed-line"><span id="typed-text"></span><span class="cursor">|</span></div>
-          <p class="hero-copy">
+          <p class="hero-copy" data-i18n="heroCopy">
             I’m Alfredo Alcala, a Bogota-based System Administrator and IT Specialist with 12+ years of experience across cloud platforms, endpoint operations, automation, infrastructure support, and practical AI implementation. I help teams reduce friction, modernize workflows, and create IT experiences people actually enjoy using.
           </p>
           <div class="hero-actions">
-            <a class="button" href="#contact">Let’s build something better</a>
-            <a class="button-outline" href="https://www.linkedin.com/in/alfredo-alcala-h/" target="_blank" rel="noreferrer">View LinkedIn</a>
-            <a class="button-ghost" href="#impact">See impact ↓</a>
+            <a class="button" href="#contact" data-i18n="heroPrimaryCta">Let’s build something better</a>
+            <a class="button-outline" href="https://www.linkedin.com/in/alfredo-alcala-h/" target="_blank" rel="noreferrer" data-i18n="heroSecondaryCta">View LinkedIn</a>
+            <a class="button-ghost" href="#impact" data-i18n="heroTertiaryCta">See impact ↓</a>
           </div>
           <div class="metrics" aria-label="Career highlights">
             <div class="metric">
@@ -729,7 +734,7 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <h2>Professional profile</h2>
+            <h2 data-i18n="aboutTitle">Professional profile</h2>
           </div>
           <p>I combine technical depth with a strong service mindset. My work centers on making systems easier to manage, support experiences smoother for users, and IT environments more dependable for the business.</p>
         </div>
@@ -755,47 +760,42 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <h2>Impact & featured strengths</h2>
+            <h2 data-i18n="impactTitle">Impact</h2>
           </div>
-          <p>This section makes the site feel more alive and shows how Alfredo works in practice across support, systems, automation, and AI-assisted operations.</p>
+          <p data-i18n="impactIntro">A practical blend of systems administration, automation, and AI-assisted operations focused on reliability, speed, and a better end-user experience.</p>
         </div>
 
         <div class="spotlight-grid">
           <article class="spotlight">
-            <span class="spotlight-badge">Featured capability</span>
-            <h3 style="margin-top:0.9rem; font-size:1.32rem;">AI & automation for real IT workflows</h3>
-            <p>Practical use of ChatGPT, Claude, and Google AI Studio to accelerate documentation, improve troubleshooting, and support smarter internal workflows.</p>
+            <span class="spotlight-badge" data-i18n="impactBadge">AI & Automation</span>
+            <h3 style="margin-top:0.9rem; font-size:1.32rem;" data-i18n="impactCardTitle">AI and automation for real IT workflows</h3>
+            <p data-i18n="impactCardIntro">Practical use of ChatGPT, Claude, and Google AI Studio to accelerate documentation, improve troubleshooting, and support smarter internal workflows.</p>
             <div class="checklist">
               <div>
-                <strong>Documentation acceleration</strong>
-                <span>Draft internal docs, SOPs, support summaries, and knowledge base content faster.</span>
+                <strong data-i18n="impactDocTitle">Documentation acceleration</strong>
+                <span data-i18n="impactDocText">Draft internal documentation, SOPs, support summaries, and knowledge base content faster and with better consistency.</span>
               </div>
               <div>
-                <strong>Troubleshooting support</strong>
-                <span>Use AI as a technical copilot for faster diagnosis, better prompts, and improved investigation paths.</span>
+                <strong data-i18n="impactTroubleTitle">Troubleshooting support</strong>
+                <span data-i18n="impactTroubleText">Use AI as a technical copilot for investigation paths, command refinement, and faster diagnosis.</span>
               </div>
               <div>
-                <strong>Workflow improvement</strong>
-                <span>Combine scripting and AI tools to reduce repetitive tasks and improve operational consistency.</span>
+                <strong data-i18n="impactWorkflowTitle">Workflow improvement</strong>
+                <span data-i18n="impactWorkflowText">Combine scripting and AI tools to reduce repetitive work and improve operational consistency.</span>
               </div>
             </div>
           </article>
 
-          <div style="display:grid; gap:1rem;">
-            <article class="quote-box">
-              <strong>Why this site feels better now</strong>
-              <p>It is no longer just a resume on a page. It now has visual movement, stronger storytelling, more contrast, clearer hierarchy, and sections that actually sell your value.</p>
-            </article>
-            <article class="spotlight">
-              <h3 style="font-size:1.22rem;">What makes Alfredo memorable</h3>
-              <ul class="clean">
-                <li>Strong mix of systems administration and end-user empathy</li>
-                <li>Hands-on automation mindset with practical AI adoption</li>
-                <li>Modern technical profile without sounding exaggerated</li>
-                <li>Professional presence designed to catch recruiter attention</li>
-              </ul>
-            </article>
-          </div>
+          <article class="spotlight">
+            <span class="spotlight-badge" data-i18n="strengthsBadge">Core strengths</span>
+            <h3 style="margin-top:0.9rem; font-size:1.22rem;" data-i18n="strengthsTitle">How I contribute</h3>
+            <ul class="clean">
+              <li data-i18n="strength1">Reliable systems administration with strong end-user support</li>
+              <li data-i18n="strength2">Hands-on automation mindset with practical AI adoption</li>
+              <li data-i18n="strength3">Clear communication, documentation, and cross-team collaboration</li>
+              <li data-i18n="strength4">Focus on improving workflows, consistency, and user experience</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
@@ -804,7 +804,7 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <h2>Core expertise</h2>
+            <h2 data-i18n="expertiseTitle">Core expertise</h2>
           </div>
           <p>Selected strengths, tools, and areas of impact built across systems support, infrastructure, application administration, and AI-assisted process improvement.</p>
         </div>
@@ -853,7 +853,7 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <h2>Experience</h2>
+            <h2 data-i18n="experienceTitle">Experience</h2>
           </div>
           <p>A progression from hands-on support into broader systems administration, cloud operations, workflow improvement, and practical AI adoption in day-to-day operations.</p>
         </div>
@@ -961,7 +961,7 @@
         <div class="panel">
           <div class="section-head" style="margin-bottom:0.8rem;">
             <div>
-              <h2>Education</h2>
+              <h2 data-i18n="educationTitle">Education</h2>
             </div>
           </div>
           <h3>Associate’s degree in Informatics</h3>
@@ -989,32 +989,32 @@
         <div class="contact-panel">
           <div class="section-head" style="margin-bottom:0.8rem;">
             <div>
-              <h2>Let’s connect</h2>
+              <h2 data-i18n="contactTitle">Let’s connect</h2>
             </div>
           </div>
-          <p>If you’re looking for a reliable IT professional with strong support experience, systems thinking, and an automation mindset, I’d be glad to connect.</p>
+          <p data-i18n="contactIntro">If you are looking for a reliable IT professional with strong support experience, systems thinking, and an automation mindset, I would be glad to connect.</p>
           <div class="contact-list">
             <a href="mailto:alfredoalcala.h@gmail.com">
-              <small>Email</small>
+              <small data-i18n="emailLabel">Email</small>
               alfredoalcala.h@gmail.com
             </a>
             <a href="tel:+573193927070">
-              <small>Phone</small>
+              <small data-i18n="phoneLabel">Phone</small>
               +57 319 392 7070
             </a>
             <a href="https://www.linkedin.com/in/alfredo-alcala-h/" target="_blank" rel="noreferrer">
-              <small>LinkedIn</small>
+              <small data-i18n="linkedinLabel">LinkedIn</small>
               linkedin.com/in/alfredo-alcala-h
             </a>
             <a href="https://alfredoalcala.github.io" target="_blank" rel="noreferrer">
-              <small>Website</small>
+              <small data-i18n="websiteLabel">Website</small>
               alfredoalcala.github.io
             </a>
           </div>
         </div>
 
         <aside class="contact-panel">
-          <h3>Quick summary</h3>
+          <h3 data-i18n="summaryTitle">Quick summary</h3>
           <ul class="clean">
             <li>Bogota, D.C., Capital District, Colombia</li>
             <li>System Administrator at Huge</li>
@@ -1031,17 +1031,144 @@
 
   <footer class="footer">
     <div class="container">
-      <p>© 2026 Alfredo Alcala. Designed as a more memorable, modern professional profile.</p>
+      <p data-i18n="footerText">© 2026 Alfredo Alcala. All rights reserved.</p>
     </div>
   </footer>
 
   <script>
-    const typedPhrases = [
-      'System Administrator',
-      'IT Specialist',
-      'Automation & AI Implementer',
-      'Cloud & Endpoint Operations'
-    ];
+    const i18n = {
+      en: {
+        navAbout: 'About',
+        navExpertise: 'Expertise',
+        navImpact: 'Impact',
+        navExperience: 'Experience',
+        navEducation: 'Education',
+        navContact: 'Contact',
+        resumeButton: 'Download CV',
+        heroEyebrow: 'Available for systems, automation, and AI-enabled IT work',
+        heroTitle: 'Making IT feel <span class="gradient-text">smarter, faster, and human.</span>',
+        heroCopy: 'I’m Alfredo Alcala, a Bogota-based System Administrator and IT Specialist with 12+ years of experience across cloud platforms, endpoint operations, automation, infrastructure support, and practical AI implementation. I help teams reduce friction, modernize workflows, and create IT experiences people actually enjoy using.',
+        heroPrimaryCta: 'Let’s build something better',
+        heroSecondaryCta: 'View LinkedIn',
+        heroTertiaryCta: 'See impact ↓',
+        aboutTitle: 'Professional profile',
+        impactTitle: 'Impact',
+        impactIntro: 'A practical blend of systems administration, automation, and AI-assisted operations focused on reliability, speed, and a better end-user experience.',
+        impactBadge: 'AI & Automation',
+        impactCardTitle: 'AI and automation for real IT workflows',
+        impactCardIntro: 'Practical use of ChatGPT, Claude, and Google AI Studio to accelerate documentation, improve troubleshooting, and support smarter internal workflows.',
+        impactDocTitle: 'Documentation acceleration',
+        impactDocText: 'Draft internal documentation, SOPs, support summaries, and knowledge base content faster and with better consistency.',
+        impactTroubleTitle: 'Troubleshooting support',
+        impactTroubleText: 'Use AI as a technical copilot for investigation paths, command refinement, and faster diagnosis.',
+        impactWorkflowTitle: 'Workflow improvement',
+        impactWorkflowText: 'Combine scripting and AI tools to reduce repetitive work and improve operational consistency.',
+        strengthsBadge: 'Core strengths',
+        strengthsTitle: 'How I contribute',
+        strength1: 'Reliable systems administration with strong end-user support',
+        strength2: 'Hands-on automation mindset with practical AI adoption',
+        strength3: 'Clear communication, documentation, and cross-team collaboration',
+        strength4: 'Focus on improving workflows, consistency, and user experience',
+        expertiseTitle: 'Core expertise',
+        experienceTitle: 'Experience',
+        educationTitle: 'Education',
+        contactTitle: 'Let’s connect',
+        contactIntro: 'If you are looking for a reliable IT professional with strong support experience, systems thinking, and an automation mindset, I would be glad to connect.',
+        summaryTitle: 'Quick summary',
+        emailLabel: 'Email',
+        phoneLabel: 'Phone',
+        linkedinLabel: 'LinkedIn',
+        websiteLabel: 'Website',
+        footerText: '© 2026 Alfredo Alcala. All rights reserved.',
+        typedPhrases: ['System Administrator', 'IT Specialist', 'Automation & AI Implementer', 'Cloud & Endpoint Operations']
+      },
+      es: {
+        navAbout: 'Perfil',
+        navExpertise: 'Especialidad',
+        navImpact: 'Impacto',
+        navExperience: 'Experiencia',
+        navEducation: 'Educación',
+        navContact: 'Contacto',
+        resumeButton: 'Descargar CV',
+        heroEyebrow: 'Disponible para trabajo en sistemas, automatización e IT impulsado por IA',
+        heroTitle: 'Haciendo que IT se sienta <span class="gradient-text">más inteligente, más ágil y más humano.</span>',
+        heroCopy: 'Soy Alfredo Alcala, System Administrator e IT Specialist en Bogotá, con más de 12 años de experiencia en plataformas cloud, operaciones de endpoints, automatización, soporte de infraestructura e implementación práctica de IA. Ayudo a los equipos a reducir fricción, modernizar flujos de trabajo y crear experiencias de IT que las personas realmente disfrutan usar.',
+        heroPrimaryCta: 'Construyamos algo mejor',
+        heroSecondaryCta: 'Ver LinkedIn',
+        heroTertiaryCta: 'Ver impacto ↓',
+        aboutTitle: 'Perfil profesional',
+        impactTitle: 'Impacto',
+        impactIntro: 'Una combinación práctica de administración de sistemas, automatización y operaciones asistidas por IA enfocada en confiabilidad, velocidad y una mejor experiencia para el usuario.',
+        impactBadge: 'IA y Automatización',
+        impactCardTitle: 'IA y automatización para flujos de trabajo reales de IT',
+        impactCardIntro: 'Uso práctico de ChatGPT, Claude y Google AI Studio para acelerar documentación, mejorar troubleshooting y apoyar flujos de trabajo internos más inteligentes.',
+        impactDocTitle: 'Aceleración de documentación',
+        impactDocText: 'Redacción más rápida y consistente de documentación interna, SOPs, resúmenes de soporte y contenido para bases de conocimiento.',
+        impactTroubleTitle: 'Soporte para troubleshooting',
+        impactTroubleText: 'Uso de IA como copiloto técnico para rutas de investigación, refinamiento de comandos y diagnósticos más rápidos.',
+        impactWorkflowTitle: 'Mejora de flujos de trabajo',
+        impactWorkflowText: 'Combinación de scripting y herramientas de IA para reducir trabajo repetitivo y mejorar la consistencia operativa.',
+        strengthsBadge: 'Fortalezas clave',
+        strengthsTitle: 'Cómo aporto valor',
+        strength1: 'Administración de sistemas confiable con fuerte soporte al usuario final',
+        strength2: 'Mentalidad práctica de automatización con adopción útil de IA',
+        strength3: 'Comunicación clara, documentación y colaboración entre equipos',
+        strength4: 'Enfoque en mejorar flujos, consistencia y experiencia del usuario',
+        expertiseTitle: 'Especialidades clave',
+        experienceTitle: 'Experiencia',
+        educationTitle: 'Educación',
+        contactTitle: 'Conectemos',
+        contactIntro: 'Si buscas un profesional de IT confiable, con sólida experiencia en soporte, pensamiento sistémico y mentalidad de automatización, será un gusto conectar.',
+        summaryTitle: 'Resumen rápido',
+        emailLabel: 'Correo',
+        phoneLabel: 'Teléfono',
+        linkedinLabel: 'LinkedIn',
+        websiteLabel: 'Sitio web',
+        footerText: '© 2026 Alfredo Alcala. Todos los derechos reservados.',
+        typedPhrases: ['Administrador de Sistemas', 'Especialista en IT', 'Implementador de Automatización e IA', 'Operaciones Cloud y Endpoints']
+      }
+    };
+
+    function applyLanguage(lang) {
+      const dict = i18n[lang] || i18n.en;
+      document.documentElement.lang = lang === 'es' ? 'es' : 'en';
+
+      document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) el.textContent = dict[key];
+      });
+
+      document.querySelectorAll('[data-i18n-html]').forEach((el) => {
+        const key = el.getAttribute('data-i18n-html');
+        if (dict[key]) el.innerHTML = dict[key];
+      });
+
+      const navLinks = document.querySelectorAll('.nav-links a');
+      if (navLinks[0]) navLinks[0].textContent = dict.navAbout;
+      if (navLinks[1]) navLinks[1].textContent = dict.navExpertise;
+      if (navLinks[2]) navLinks[2].textContent = dict.navImpact;
+      if (navLinks[3]) navLinks[3].textContent = dict.navExperience;
+      if (navLinks[4]) navLinks[4].textContent = dict.navEducation;
+      if (navLinks[5]) navLinks[5].textContent = dict.navContact;
+
+      const resumeButton = document.getElementById('resume-button');
+      if (resumeButton) resumeButton.textContent = dict.resumeButton;
+
+      window.currentTypedPhrases = dict.typedPhrases;
+      localStorage.setItem('site-language', lang);
+
+      const enBtn = document.getElementById('lang-en');
+      const esBtn = document.getElementById('lang-es');
+      if (enBtn) enBtn.setAttribute('aria-pressed', String(lang === 'en'));
+      if (esBtn) esBtn.setAttribute('aria-pressed', String(lang === 'es'));
+    }
+
+    window.currentTypedPhrases = i18n.en.typedPhrases;
+    const savedLanguage = localStorage.getItem('site-language') || 'en';
+    applyLanguage(savedLanguage);
+
+    document.getElementById('lang-en')?.addEventListener('click', () => applyLanguage('en'));
+    document.getElementById('lang-es')?.addEventListener('click', () => applyLanguage('es'));
 
     const typedTarget = document.getElementById('typed-text');
     let phraseIndex = 0;
@@ -1049,8 +1176,8 @@
     let deleting = false;
 
     function runTyping() {
-      if (!typedTarget) return;
-      const current = typedPhrases[phraseIndex];
+      if (!typedTarget || !window.currentTypedPhrases || !window.currentTypedPhrases.length) return;
+      const current = window.currentTypedPhrases[phraseIndex];
       typedTarget.textContent = deleting
         ? current.slice(0, charIndex--)
         : current.slice(0, charIndex++);
@@ -1062,7 +1189,7 @@
         speed = 1300;
       } else if (deleting && charIndex < 0) {
         deleting = false;
-        phraseIndex = (phraseIndex + 1) % typedPhrases.length;
+        phraseIndex = (phraseIndex + 1) % window.currentTypedPhrases.length;
         charIndex = 0;
         speed = 240;
       }
@@ -1072,12 +1199,12 @@
     runTyping();
 
     const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) entry.target.classList.add('visible');
       });
     }, { threshold: 0.14 });
 
-    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
 
     const tiltCard = document.getElementById('tilt-card');
     if (tiltCard) {
@@ -1089,6 +1216,7 @@
         const rotateX = ((y / rect.height) - 0.5) * -10;
         tiltCard.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
       });
+
       tiltCard.addEventListener('mouseleave', () => {
         tiltCard.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
       });
