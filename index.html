@@ -1,453 +1,767 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81111773-2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-81111773-2');
-    </script>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="profile" href="https://gmpg.org/xfn/11" />
-    <link media="all" href="css/css-autoptimize_441974890f1f70321fb6ab63e4d3bba1.css" rel="stylesheet" />
-    <title>Alfredo Alcala : IT Specialist</title>
-    <link rel="shortcut icon" href="images/aa-logo-png-13-Free-PNG-Images-Transparent.png" type="image/x-icon">  
-    <meta name="robots" content="noindex,nofollow" />
-    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="//s.w.org" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" id="myour-fonts-css" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900|Mr+Dafoe&subset=latin,latin-ext" type="text/css" media="all" />
-    <link rel="stylesheet" id="elementor-post-128-css" href="css/css-autoptimize_single_6c95705959d4c6ab8c571b883d5f3d23.css" type="text/css" media="all" />
-    <link rel="stylesheet" id="google-fonts-1-css" href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900|Roboto+Slab:100,200,300,400,500,600,700,800,900&ver=5.6" type="text/css" media="all" />
-    <script type="text/javascript" src="js/jquery-jquery.min.js" id="jquery-core-js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Alfredo Alcala | System Administrator and IT Specialist focused on automation, cloud platforms, endpoint management, and end-user experience." />
+  <meta name="theme-color" content="#0b1020" />
+  <title>Alfredo Alcala | System Administrator & IT Specialist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-soft: #0d1729;
+      --panel: rgba(15, 23, 42, 0.72);
+      --panel-strong: rgba(15, 23, 42, 0.92);
+      --text: #e5eefb;
+      --muted: #9cb0cf;
+      --line: rgba(148, 163, 184, 0.18);
+      --brand: #5eead4;
+      --brand-2: #60a5fa;
+      --accent: #c084fc;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      --radius: 24px;
+      --radius-sm: 16px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(96, 165, 250, 0.18), transparent 32%),
+        radial-gradient(circle at 85% 15%, rgba(192, 132, 252, 0.16), transparent 24%),
+        linear-gradient(180deg, #040816 0%, #07111f 48%, #08121d 100%);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(var(--max), calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: rgba(4, 8, 22, 0.68);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      color: #04111b;
+      font-weight: 900;
+      box-shadow: var(--shadow);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible { color: var(--text); }
+
+    .button,
+    .button-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      min-height: 48px;
+      padding: 0.85rem 1.2rem;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: transform 0.2s ease, opacity 0.2s ease, border-color 0.2s ease;
+    }
+
+    .button:hover,
+    .button-outline:hover { transform: translateY(-1px); }
+
+    .button {
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      color: #03121c;
+      box-shadow: 0 16px 40px rgba(94, 234, 212, 0.2);
+    }
+
+    .button-outline {
+      border: 1px solid var(--line);
+      color: var(--text);
+      background: rgba(255,255,255,0.02);
+    }
+
+    .hero {
+      padding: 5.5rem 0 4rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      border: 1px solid rgba(94, 234, 212, 0.2);
+      background: rgba(94, 234, 212, 0.08);
+      color: var(--brand);
+      padding: 0.5rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      line-height: 0.95;
+      letter-spacing: -0.06em;
+      margin: 0;
+      max-width: 10ch;
+    }
+
+    .hero h1 span { color: var(--brand); }
+
+    .hero-copy {
+      margin-top: 1.4rem;
+      max-width: 64ch;
+      font-size: 1.08rem;
+      color: var(--muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-top: 1.8rem;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 2.2rem;
+    }
+
+    .metric,
+    .card,
+    .timeline-item,
+    .contact-panel,
+    .skill-pill,
+    .highlight {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow);
+    }
+
+    .metric {
+      padding: 1rem;
+      border-radius: 20px;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 1.5rem;
+      letter-spacing: -0.04em;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .hero-card {
+      padding: 1.4rem;
+      border-radius: 28px;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.72));
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: auto -40px -40px auto;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(96, 165, 250, 0.32), transparent 65%);
+    }
+
+    .portrait {
+      aspect-ratio: 1 / 1.12;
+      border-radius: 22px;
+      background:
+        linear-gradient(160deg, rgba(96, 165, 250, 0.22), rgba(94, 234, 212, 0.08)),
+        linear-gradient(180deg, #132238, #0a1422);
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,0.06);
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+
+    .portrait span {
+      font-size: clamp(4rem, 10vw, 6rem);
+      font-weight: 900;
+      letter-spacing: -0.08em;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .hero-card h2 {
+      margin: 0 0 0.35rem;
+      font-size: 1.4rem;
+    }
+
+    .hero-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    section { padding: 2.2rem 0; }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      letter-spacing: -0.05em;
+    }
+
+    .section-head p {
+      margin: 0;
+      max-width: 56ch;
+      color: var(--muted);
+    }
+
+    .cards-3,
+    .cards-2,
+    .timeline,
+    .contact-grid,
+    .skill-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .cards-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .cards-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .timeline { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1.2fr 0.8fr; }
+    .skill-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    .card,
+    .timeline-item,
+    .contact-panel {
+      padding: 1.35rem;
+      border-radius: var(--radius);
+    }
+
+    .card h3,
+    .timeline-item h3,
+    .contact-panel h3 {
+      margin-top: 0;
+      margin-bottom: 0.55rem;
+      font-size: 1.12rem;
+      letter-spacing: -0.03em;
+    }
+
+    .card p,
+    .timeline-item p,
+    .contact-panel p,
+    .timeline-item li,
+    .contact-panel li {
+      color: var(--muted);
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .skill-pill {
+      padding: 0.7rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      color: var(--text);
+    }
+
+    .timeline-item {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .timeline-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.8rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .timeline-date {
+      color: var(--brand);
+      font-size: 0.93rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .timeline-company {
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .timeline-role {
+      font-size: 1.08rem;
+      font-weight: 800;
+    }
+
+    ul.clean {
+      padding-left: 1rem;
+      margin: 0.8rem 0 0;
+    }
+
+    .highlight {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: 1.1rem;
+      border-radius: 20px;
+    }
+
+    .highlight strong {
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    .contact-list a,
+    .contact-list div {
+      display: block;
+      padding: 0.95rem 1rem;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.02);
+    }
+
+    .contact-list small {
+      display: block;
+      color: var(--muted);
+      margin-bottom: 0.18rem;
+    }
+
+    .footer {
+      padding: 2.5rem 0 3rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .cards-3,
+      .cards-2,
+      .contact-grid,
+      .skill-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-inner {
+        flex-wrap: wrap;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        width: 100%;
+      }
+
+      h1 { max-width: none; }
+    }
+
+    @media (max-width: 640px) {
+      .metrics { grid-template-columns: 1fr; }
+      .hero { padding-top: 4rem; }
+      .section-head { align-items: start; flex-direction: column; }
+    }
+  </style>
 </head>
-<body class="home page-template page-template-template-layout-builder page-template-template-layout-builder-php page page-id-35 elementor-default elementor-kit-128 elementor-page elementor-page-35">
-    <div class="preloader">
-        <div class="box-1">
-            <div class="centrize full-width">
-                <div class="vertical-center">
-                    <div class="spinner"><div class="lines"></div></div>
-                </div>
-            </div>
-        </div>
-        <div class="box-2"></div>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Go to homepage">
+        <span class="brand-mark">AA</span>
+        <span>Alfredo Alcala</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="button-outline" href="https://raw.githubusercontent.com/AlfredoAlcala/cv/gh-pages/Alfredo's%20Resume.pdf" target="_blank" rel="noreferrer">Download CV</a>
     </div>
-    <div class="container">
-        <header class="header">
-            <div class="logo">
-                <a href="https://alfredoalcala.github.io">
-                    <img class="logo-img" src="images/logotrans.png" alt="a logo" />
-                    <span class="logo-lnk">
-                        Alfredo <br />
-                        Alcala
-                    </span>
-                </a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Available for impactful IT leadership and systems work</div>
+          <h1>Turning IT complexity into <span>stable, scalable</span> user experiences.</h1>
+          <p class="hero-copy">
+            I’m Alfredo Alcala, a Bogota-based System Administrator and IT Specialist with 12+ years of experience across endpoint management, cloud platforms, automation, infrastructure support, and end-user operations. I help teams reduce friction, improve reliability, and turn technical challenges into business value.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#contact">Let’s work together</a>
+            <a class="button-outline" href="https://www.linkedin.com/in/alfredo-alcala-h/" target="_blank" rel="noreferrer">View LinkedIn</a>
+          </div>
+          <div class="metrics" aria-label="Career highlights">
+            <div class="metric">
+              <strong>12+ years</strong>
+              <span>Experience in IT support, systems, and applications</span>
             </div>
-            <a href="#" class="menu-btn"><span></span></a>
-            <a href="https://raw.githubusercontent.com/AlfredoAlcala/cv/gh-pages/Alfredo's%20Resume.pdf" class="btn download-cv-btn" target="_blank" download>
-                <span class="animated-button"><span>Download CV</span></span> <i class="icon fas fa-download"></i>
+            <div class="metric">
+              <strong>2025–Now</strong>
+              <span>System Administrator at Huge</span>
+            </div>
+            <div class="metric">
+              <strong>Automation</strong>
+              <span>Scripting, API troubleshooting, and workflow improvement</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Profile summary card">
+          <div class="portrait" aria-hidden="true">
+            <span>AA</span>
+          </div>
+          <h2>System Administrator</h2>
+          <p>Focused on cloud operations, Mac provisioning, directory services, scripting, and modern IT support.</p>
+          <div class="tag-row">
+            <span class="skill-pill">Google Workspace</span>
+            <span class="skill-pill">AWS</span>
+            <span class="skill-pill">MDM / DEP</span>
+            <span class="skill-pill">PowerShell</span>
+            <span class="skill-pill">Bash</span>
+            <span class="skill-pill">REST API</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Professional profile</h2>
+          </div>
+          <p>
+            I combine technical depth with a service mindset. My work centers on making systems easier to manage, support experiences smoother for users, and IT environments more dependable for the business.
+          </p>
+        </div>
+
+        <div class="cards-3">
+          <article class="card">
+            <h3>Operations that scale</h3>
+            <p>I support daily IT operations with a focus on reliability, standardization, and fast issue resolution across endpoints, accounts, and collaboration tools.</p>
+          </article>
+          <article class="card">
+            <h3>Automation mindset</h3>
+            <p>I improve repeatable workflows using Google Apps Script, Bash, and PowerShell, helping reduce manual work and strengthen consistency.</p>
+          </article>
+          <article class="card">
+            <h3>User-first support</h3>
+            <p>I apply customer service principles to IT so employees and stakeholders receive responsive, practical, and confidence-building support.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="expertise">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Core expertise</h2>
+          </div>
+          <p>Selected strengths, tools, and areas of impact built across systems support, infrastructure, and application administration.</p>
+        </div>
+
+        <div class="skill-grid">
+          <div class="card">
+            <h3>Platforms & administration</h3>
+            <div class="tag-row">
+              <span class="skill-pill">Google Workspace</span>
+              <span class="skill-pill">AWS cloud solutions</span>
+              <span class="skill-pill">Windows Active Directory</span>
+              <span class="skill-pill">Mac provisioning</span>
+              <span class="skill-pill">MDM / DEP</span>
+              <span class="skill-pill">Remote support</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Technical capabilities</h3>
+            <div class="tag-row">
+              <span class="skill-pill">Scripting</span>
+              <span class="skill-pill">REST API debugging</span>
+              <span class="skill-pill">SQL / T-SQL</span>
+              <span class="skill-pill">Documentation</span>
+              <span class="skill-pill">Analytical thinking</span>
+              <span class="skill-pill">Problem solving</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Certifications & learning</h3>
+            <p>Ongoing upskilling in JavaScript, jQuery, JSON, HTML, CSS, Python, Linux, Git, data science, and application development.</p>
+          </div>
+          <div class="card">
+            <h3>Languages</h3>
+            <div class="tag-row">
+              <span class="skill-pill">Spanish — Native/Bilingual</span>
+              <span class="skill-pill">English — Native/Bilingual</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Experience</h2>
+          </div>
+          <p>A progression from hands-on support into broader systems administration, cloud operations, and workflow improvement.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-top">
+              <div>
+                <div class="timeline-date">September 2025 — Present</div>
+                <div class="timeline-role">System Administrator</div>
+                <div class="timeline-company">Huge · Bogota, Colombia</div>
+              </div>
+            </div>
+            <ul class="clean">
+              <li>Lead provisioning and deployment of Mac systems for end users using MDM and DEP.</li>
+              <li>Manage Google Workspace and AWS cloud solutions.</li>
+              <li>Support stable operations through troubleshooting, systems administration, and issue resolution.</li>
+              <li>Debug REST API integrations and automate workflows with Google Apps Script, Bash, and PowerShell.</li>
+              <li>Manage user accounts, groups, email lists, and network-related support for file shares, DNS, VPN, and printers.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-top">
+              <div>
+                <div class="timeline-date">April 2022 — September 2025</div>
+                <div class="timeline-role">Senior Information Technology Specialist</div>
+                <div class="timeline-company">Huge · Bogota, Colombia</div>
+              </div>
+            </div>
+            <ul class="clean">
+              <li>Delivered advanced end-user support across software, endpoint, and infrastructure environments.</li>
+              <li>Collaborated with IT teams to research, resolve, and prevent operational issues.</li>
+              <li>Handled software support for Adobe Suite, Google Apps, and Microsoft Office.</li>
+              <li>Provided remote support using TeamViewer, ARD, and Casper Remote.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-top">
+              <div>
+                <div class="timeline-date">March 2021 — April 2022</div>
+                <div class="timeline-role">IT Support Specialist</div>
+                <div class="timeline-company">Huge · Colombia</div>
+              </div>
+            </div>
+            <p>Supported core IT operations and user enablement while strengthening endpoint deployment, troubleshooting, and collaboration across support teams.</p>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-top">
+              <div>
+                <div class="timeline-date">November 2017 — December 2020</div>
+                <div class="timeline-role">Application Specialist</div>
+                <div class="timeline-company">NETCOM WIRELESS S.A. · Bogota, Colombia</div>
+              </div>
+            </div>
+            <ul class="clean">
+              <li>Developed, implemented, and optimized stored procedures and functions using T-SQL.</li>
+              <li>Reviewed query performance and proposed improvements.</li>
+              <li>Worked with developers, vendors, and stakeholders to support secure infrastructure delivery.</li>
+              <li>Contributed to quality assurance, system checks, and technical support for business applications.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-top">
+              <div>
+                <div class="timeline-date">June 2017 — July 2017</div>
+                <div class="timeline-role">Technical Support Specialist L2</div>
+                <div class="timeline-company">LATCOM · Bogota, Colombia</div>
+              </div>
+            </div>
+            <p>Handled Level II support, escalation management, smartphone configuration, network troubleshooting, and reporting for campaign operations.</p>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-top">
+              <div>
+                <div class="timeline-date">February 2016 — May 2017</div>
+                <div class="timeline-role">Technical Support L2</div>
+                <div class="timeline-company">Avior Airlines C.A.</div>
+              </div>
+            </div>
+            <p>Diagnosed equipment and network failures, supported remote and onsite interventions, and managed incidents through service desk workflows.</p>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-top">
+              <div>
+                <div class="timeline-date">December 2013 — January 2016</div>
+                <div class="timeline-role">Technical Support Analyst L2</div>
+                <div class="timeline-company">Soporte SPI, C.A.</div>
+              </div>
+            </div>
+            <p>Built a strong foundation in frontline technical support, troubleshooting, and operational service delivery.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container cards-2">
+        <div class="card">
+          <div class="section-head" style="margin-bottom:0.8rem;">
+            <div>
+              <h2>Education</h2>
+            </div>
+          </div>
+          <h3>Associate’s degree in Informatics</h3>
+          <p>IUTIRLA · 2007 — 2011</p>
+        </div>
+
+        <div class="card">
+          <div class="section-head" style="margin-bottom:0.8rem;">
+            <div>
+              <h2>What sets me apart</h2>
+            </div>
+          </div>
+          <div class="highlight">
+            <div>
+              <strong>Technical depth with business empathy</strong>
+              <span>I’m most effective where dependable systems, thoughtful communication, and practical improvements directly affect the day-to-day experience of teams.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact-grid">
+        <div class="contact-panel">
+          <div class="section-head" style="margin-bottom:0.8rem;">
+            <div>
+              <h2>Let’s connect</h2>
+            </div>
+          </div>
+          <p>If you’re looking for a reliable IT professional with strong support experience, systems thinking, and an automation mindset, I’d be glad to connect.</p>
+          <div class="contact-list">
+            <a href="mailto:alfredoalcala.h@gmail.com">
+              <small>Email</small>
+              alfredoalcala.h@gmail.com
             </a>
-            <div class="header-sidebar">
-                <div class="top-menu">
-                    <div class="top-menu-nav">
-                        <div class="menu-topmenu-container">
-                            <ul id="menu-main-menu" class="menu">
-                                <li class="menu-item"><a class="dropdown-toggle" href="#section-started"><span class="animated-button"><span>Home <i class="icon icon-down-open"></i></span></span></a></li>
-                                <li class="menu-item"><a href="#section-about"><span class="animated-button"><span>About</span></span></a></li>
-                                <li class="menu-item"><a href="#section-resume"><span class="animated-button"><span>Resume</span></span></a></li>
-                                <li class="menu-item"><a href="#section-portfolio"><span class="animated-button"><span>Portfolio</span></span></a></li>
-                                <li class="menu-item"><a href="#section-contacts"><span class="animated-button"><span>Contacts</span></span></a></li>
-                                <li class="menu-item"><a href="new.html"><span class="animated-button"><span>Blog (Coming soon)</span></span></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <div class="wrapper">
-            <div class="background-bg">
-                <div class="background-filter circle"><div class="background-img" style="background-image: url(images/logo.png);"></div></div>
-            </div>
-            <div id="post-35" class="post-35 page type-page status-publish hentry">
-                <div data-elementor-type="wp-page" data-elementor-id="35" class="elementor elementor-35" data-elementor-settings="[]">
-                    <div class="elementor-inner">
-                        <div class="elementor-section-wrap">
-
-                            <!-- Home Section -->
-                            <section class="elementor-section elementor-top-section elementor-element elementor-element-7d5d702 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="7d5d702" data-element_type="section" id="section-started">
-                                <div class="elementor-container elementor-column-gap-no">
-                                    <div class="elementor-row">
-                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5cd59d3" data-id="5cd59d3" data-element_type="column">
-                                            <div class="elementor-column-wrap elementor-element-populated">
-                                                <div class="elementor-widget-wrap">
-                                                    <div class="elementor-element elementor-element-90dbefe elementor-widget elementor-widget-myour-started-section" data-id="90dbefe" data-element_type="widget" data-widget_type="myour-started-section.default">
-                                                        <div class="elementor-widget-container">
-                                                            <div class="section started">
-                                                                <div class="centrize full-width">
-                                                                    <div class="vertical-center">
-                                                                        <h1 class="h-title">
-                                                                            <span>
-                                                                                Alfredo <br />
-                                                                                Alcala
-                                                                            </span>
-                                                                        </h1>
-                                                                        <div class="started-content">
-                                                                            <div class="h-subtitles">
-                                                                                <div class="h-subtitle typing-subtitle">
-                                                                                    <p><span>Apps Specialist</span></p>
-                                                                                    <p><span>Programmer</span></p>
-                                                                                    <p><span>Consultant and Mentor</span></p>
-                                                                                    <p><span>Support Specialist</span></p>
-                                                                                </div>
-                                                                                <span class="typed-subtitle"></span>
-                                                                            </div>
-                                                                            <div class="h-text">
-                                                                                <div>
-                                                                                    <p>
-                                                                                        Hello! I am passionate about technology, with over 10 years of experience in IT. I enjoy learning new things every day and challenging myself to achieve the best results. I am also a drummer and value creativity in all aspects of my work.
-                                                                                    </p>
-                                                                                </div>
-                                                                            </div>
-                                                                            <a href="#section-contacts" class="btn">
-                                                                                <span class="animated-button"><span>Contact Me</span></span> <i class="icon fas fa-chevron-right"></i>
-                                                                            </a>
-                                                                            <div>
-                                                                                <a href="#" class="menu-btn"><span></span></a>
-                                                                                <a href="https://raw.githubusercontent.com/AlfredoAlcala/cv/gh-pages/Alfredo's%20Resume.pdf" class="btn download-cv-btn" target="_blank" download>
-                                                                                    <span class="animated-button"><span>Download CV</span></span> <i class="icon fas fa-download"></i>
-                                                                                </a>
-                                                                            </div>  
-                                                                        </div>
-                                                                     </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-
-                            <!-- About Section -->
-                            <section class="elementor-section elementor-top-section elementor-element elementor-element-686482d elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="686482d" data-element_type="section" id="section-about">
-                                <div class="elementor-container elementor-column-gap-no">
-                                    <div class="elementor-row">
-                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-b9234fd" data-id="b9234fd" data-element_type="column">
-                                            <div class="elementor-column-wrap elementor-element-populated">
-                                                <div class="elementor-widget-wrap">
-                                                    <div class="elementor-element elementor-element-ec30087 elementor-widget elementor-widget-myour-about-me" data-id="ec30087" data-element_type="widget" data-widget_type="myour-about-me.default">
-                                                        <div class="elementor-widget-container">
-                                                            <div class="section about">
-                                                                <div class="content">
-                                                                    <div class="titles">
-                                                                        <h2 class="title"><span> About Me </span></h2>
-                                                                        <div class="subtitle"><span> My story </span></div>
-                                                                    </div>
-                                                                    <div class="single-post-text">
-                                                                        <div>
-                                                                            <p>
-                                                                                With over 10 years in technology, I am committed to continuous learning and delivering value through IT solutions. My journey includes an Associate's degree in Informatics and a dedication to creative problem-solving, teamwork, and customer-centric support. I apply customer service concepts to IT to improve the user experience for customers, employees, and management.
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="info-list">
-                                                                        <ul>
-                                                                            <li><strong> <span> Residence: </span> </strong> <span> COLOMBIA </span></li>
-                                                                            <li><strong> <span> Freelance: </span> </strong> <span> Available </span></li>
-                                                                            <li><strong> <span> Phone: </span> </strong> <span> +57 319 392 7070</span></li>
-                                                                            <li><strong> <span> E-mail: </span> </strong> <span> alfredoalcala.h@gmail.com</span></li>
-                                                                            <li><strong> <span> LinkedIn: </span> </strong> <span><a href="https://www.linkedin.com/in/alfredo-alcala-h/" target="_blank">alfredo-alcala-h</a></span></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div class="clear"></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-
-                            <!-- Services Section -->
-                            <!-- (Section unchanged; improve text here if desired) -->
-
-                            <!-- Experience Section -->
-                            <section class="elementor-section elementor-top-section elementor-element elementor-element-e7b3ae5 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="e7b3ae5" data-element_type="section" id="section-resume">
-                                <div class="elementor-container elementor-column-gap-no">
-                                    <div class="elementor-row">
-                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-ece7e36" data-id="ece7e36" data-element_type="column">
-                                            <div class="elementor-column-wrap elementor-element-populated">
-                                                <div class="elementor-widget-wrap">
-                                                    <div class="elementor-element elementor-element-a0423d5 elementor-widget elementor-widget-myour-resume" data-id="a0423d5" data-element_type="widget" data-widget_type="myour-resume.default">
-                                                        <div class="elementor-widget-container">
-                                                            <div class="section resume">
-                                                                <div class="content">
-                                                                    <div class="titles">
-                                                                        <h2 class="title"><span> Experience </span></h2>
-                                                                        <div class="subtitle"><span> Working with </span></div>
-                                                                    </div>
-                                                                    <div class="content-carousel">
-                                                                        <div class="owl-carousel" data-slidesview="2" data-slidesview_mobile="1">
-                                                                            <div class="item">
-                                                                                <div class="resume-item active">
-                                                                                    <div class="date"><span>2022 - Present </span></div>
-                                                                                    <div class="name">
-                                                                                        <span>
-                                                                                           HUGE INC<br />
-                                                                                            as SENIOR IT Support Specialist
-                                                                                        </span>
-                                                                                    </div>
-                                                                                    <div class="single-post-text">
-                                                                                        <div><p>
-                                                                                            <ul>
-                                                                                                <li>Coordinate and manage IT team operations</li>
-                                                                                                <li>Create and deploy IT policies</li>
-                                                                                                <li>Lead integrations and service deployments</li>
-                                                                                                <li>Provision and deploy Mac systems for end users (MDM, DEP)</li>
-                                                                                                <li>Manage users, groups, and email lists via Windows Active Directory</li>
-                                                                                                <li>Collaborate with other IT staff to resolve complex issues</li>
-                                                                                                <li>Troubleshoot and resolve software issues (Adobe Suite, Google Apps, MS Office, etc.)</li>
-                                                                                                <li>Assist with system checks and quality assurance</li>
-                                                                                                <li>Administer applications and provide technical expertise for all IT systems</li>
-                                                                                                <li>Provide remote support using tools such as TeamViewer, ARD, and Casper Remote</li>
-                                                                                            </ul>
-                                                                                        </p></div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="item">
-                                                                                <div class="resume-item active">
-                                                                                    <div class="date"><span>2021 - Present </span></div>
-                                                                                    <div class="name">
-                                                                                        <span>
-                                                                                           HUGE INC<br />
-                                                                                            as IT Support Specialist
-                                                                                        </span>
-                                                                                    </div>
-                                                                                    <div class="single-post-text">
-                                                                                        <div><p>
-                                                                                            <ul>
-                                                                                                <li>Provision and deploy Mac systems for end users (MDM, DEP)</li>
-                                                                                                <li>Manage users, groups, and email lists via Windows Active Directory</li>
-                                                                                                <li>Collaborate with other IT staff to resolve issues</li>
-                                                                                                <li>Troubleshoot and resolve software issues (Adobe Suite, Google Apps, MS Office, etc.)</li>
-                                                                                                <li>Assist with system checks and quality assurance</li>
-                                                                                                <li>Administer applications and provide technical support for IT systems</li>
-                                                                                                <li>Provide remote support using tools such as TeamViewer, ARD, and Casper Remote</li>
-                                                                                            </ul>
-                                                                                        </p></div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="item">
-                                                                                <div class="resume-item">
-                                                                                    <div class="date"><span>2017 - 2020 </span></div>
-                                                                                    <div class="name">
-                                                                                        <span>
-                                                                                           Netcom Wireless SA<br />
-                                                                                            as Application Specialist
-                                                                                        </span>
-                                                                                    </div>
-                                                                                    <div class="single-post-text">
-                                                                                        <div><p>
-                                                                                            <ul>
-                                                                                                <li>Coordinated with senior analysts and stakeholders to deliver IT infrastructure solutions</li>
-                                                                                                <li>Developed, implemented, and optimized stored procedures and functions using T-SQL</li>
-                                                                                                <li>Analyzed and improved SQL query performance</li>
-                                                                                                <li>Collaborated with developers and vendors to ensure secure infrastructure</li>
-                                                                                                <li>Assisted with system checks and quality assurance</li>
-                                                                                                <li>Administered applications and provided technical expertise for IT systems</li>
-                                                                                                <li>Verified security of third-party vendors and collaborated to meet security requirements</li>
-                                                                                            </ul>
-                                                                                        </p></div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="item">
-                                                                                <div class="resume-item">
-                                                                                    <div class="date"><span>2017</span></div>
-                                                                                    <div class="name">
-                                                                                        <span>
-                                                                                           Latcom SA <br />
-                                                                                          as  Technical Support Level II
-                                                                                        </span>
-                                                                                    </div>
-                                                                                    <div class="single-post-text">
-                                                                                        <div><p>
-                                                                                            <ul>
-                                                                                                <li>Provided telephone support for internal campaigns</li>
-                                                                                                <li>Managed and escalated Level II cases</li>
-                                                                                                <li>Configured smartphone equipment</li>
-                                                                                                <li>Provided PQR advice and support</li>
-                                                                                                <li>Diagnosed and resolved network connection issues</li>
-                                                                                                <li>Prepared management and performance reports</li>
-                                                                                            </ul>
-                                                                                        </p></div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="item">
-                                                                                <div class="resume-item">
-                                                                                    <div class="date"><span>2016-2017</span></div>
-                                                                                    <div class="name">
-                                                                                        <span>
-                                                                                           Avior Airlines <br />
-                                                                                           as Technical Support Specialist
-                                                                                        </span>
-                                                                                    </div>
-                                                                                    <div class="single-post-text">
-                                                                                        <div><p>
-                                                                                            <ul>
-                                                                                                <li>Diagnosed and detected equipment and network failures</li>
-                                                                                                <li>Managed diagnostic and optimization programs (Remote/OnSite)</li>
-                                                                                                <li>Handled incident and requirements management via service desk software</li>
-                                                                                            </ul>
-                                                                                        </p></div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="navs"><span class="prev fas fa-chevron-left"></span> <span class="next fas fa-chevron-right"></span></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-
-                            <!-- Education Section -->
-                            <section class="elementor-section elementor-top-section elementor-element elementor-element-10da824 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="10da824" data-element_type="section">
-                                <div class="elementor-container elementor-column-gap-no">
-                                    <div class="elementor-row">
-                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-10da824" data-id="10da824" data-element_type="column">
-                                            <div class="elementor-column-wrap elementor-element-populated">
-                                                <div class="elementor-widget-wrap">
-                                                    <div class="elementor-element elementor-element-6b5136d elementor-widget elementor-widget-myour-resume" data-id="6b5136d" data-element_type="widget" data-widget_type="myour-resume.default">
-                                                        <div class="elementor-widget-container">
-                                                            <div class="section resume">
-                                                                <div class="content">
-                                                                    <div class="titles">
-                                                                        <h2 class="title"><span> Education </span></h2>
-                                                                        <div class="subtitle"><span> Studied at </span></div>
-                                                                    </div>
-                                                                    <div class="content-carousel">
-                                                                        <div class="owl-carousel" data-slidesview="2" data-slidesview_mobile="1">
-                                                                            <div class="item">
-                                                                                <div class="resume-item active">
-                                                                                    <div class="date"><span> 2007-2011 </span></div>
-                                                                                    <div class="name">
-                                                                                        <span>
-                                                                                            University Institute of Industrial Technology <br />
-                                                                                            Rodolfo Loero Arismendi 
-                                                                                        </span>
-                                                                                    </div>
-                                                                                    <div class="single-post-text">
-                                                                                        <div><p>Associate's degree in Informatics</p></div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="navs"><span class="prev fas fa-chevron-left"></span> <span class="next fas fa-chevron-right"></span></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-
-                            <!-- Skills Sections -->
-                            <!-- Design, Language, Coding Skills: update text as needed, but do not remove sections -->
-
-                            <!-- Portfolio Section -->
-                            <!-- (Unchanged, placeholder for your works) -->
-
-                            <!-- Contacts Section -->
-                            <section class="elementor-section elementor-top-section elementor-element elementor-element-e3f597b elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="e3f597b" data-element_type="section" id="section-contacts">
-                                <div class="elementor-container elementor-column-gap-no">
-                                    <div class="elementor-row">
-                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-0981c8e" data-id="0981c8e" data-element_type="column">
-                                            <div class="elementor-column-wrap elementor-element-populated">
-                                                <div class="elementor-widget-wrap">
-                                                    <div class="elementor-element elementor-element-619bb51 elementor-widget elementor-widget-myour-contacts" data-id="619bb51" data-element_type="widget" data-widget_type="myour-contacts.default">
-                                                        <div class="elementor-widget-container">
-                                                            <div class="section contacts">
-                                                                <div class="content">
-                                                                    <div class="titles">
-                                                                        <h2 class="title"><span> Contact </span></h2>
-                                                                        <div class="subtitle"><span> Let's talk </span></div>
-                                                                    </div>
-                                                                    <div class="contact-form">
-                                                                        <!-- Contact form unchanged -->
-                                                                    </div>
-                                                                    <div class="contact-info">
-                                                                        <div class="name">Alfredo Alcala</div>
-                                                                        <div class="subname">Consultant & Mentor</div>
-                                                                        <div class="info-list">
-                                                                            <ul>
-                                                                                <li><strong> <span> Residence: </span> </strong> <span> COLOMBIA </span></li>
-                                                                                <li><strong> <span> Freelance: </span> </strong> <span> Available </span></li>
-                                                                                <li><strong> <span> Phone: </span> </strong> <span> +57 319 392 7070 </span></li>
-                                                                                <li><strong> <span> E-mail: </span> </strong> <span> alfredoalcala.h@gmail.com </span></li>
-                                                                            </ul>
-                                                                        </div>
-                                                                        <div class="author">Alfredo Alcala</div>
-                                                                    </div>
-                                                                    <div class="clear"></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <a href="tel:+573193927070">
+              <small>Phone</small>
+              +57 319 392 7070
+            </a>
+            <a href="https://www.linkedin.com/in/alfredo-alcala-h/" target="_blank" rel="noreferrer">
+              <small>LinkedIn</small>
+              linkedin.com/in/alfredo-alcala-h
+            </a>
+            <a href="https://alfredoalcala.github.io" target="_blank" rel="noreferrer">
+              <small>Website</small>
+              alfredoalcala.github.io
+            </a>
+          </div>
         </div>
-        <footer class="footer">
-            <div class="footer-inner">
-                <div class="text">&copy; 2025 Alfredo Alcala. All rights reserved.</div>
-                <div class="socials">
-                    <a target="_blank" href="https://www.linkedin.com/in/alfredo-alcala-h/"><i class="icon fab fa-linkedin"></i></a>
-                    <a target="_blank" href="https://www.facebook.com/"><i class="icon fab fa-facebook-f"></i></a>
-                    <a target="_blank" href="https://www.instagram.com/"><i class="icon fab fa-instagram"></i></a>
-                    <a target="_blank" href="https://dribbble.com/"><i class="icon fab fa-dribbble"></i></a>
-                </div>
-            </div>
-        </footer>
+
+        <aside class="contact-panel">
+          <h3>Quick summary</h3>
+          <ul class="clean">
+            <li>Bogota, D.C., Capital District, Colombia</li>
+            <li>System Administrator at Huge</li>
+            <li>12+ years in technology</li>
+            <li>Strong in scripting, documentation, and analytical problem solving</li>
+          </ul>
+          <div class="hero-actions" style="margin-top:1.4rem;">
+            <a class="button" href="https://raw.githubusercontent.com/AlfredoAlcala/cv/gh-pages/Alfredo's%20Resume.pdf" target="_blank" rel="noreferrer">Download Resume</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Alfredo Alcala. Designed to present a stronger, more modern professional profile.</p>
     </div>
-    <!-- Scripts for theme functionality (do not remove) -->
-    <script type="text/javascript" src="js/jquery-jquery.min.js" id="jquery-core-js"></script>
-    <script defer src="js/js-autoptimize_bf588bfa6b7921a966116d7a27bde164.js"></script>
-    <script type="text/javascript" src="main.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            emailjs.init("user_xrRjTKr9MdESSiAEa8RIA");
-        })();
-    </script>
+  </footer>
 </body>
 </html>
